@@ -4,15 +4,12 @@ function firstWord(s) {
         return '';
     }
 
-    // Find the index of the first space
     let spaceIndex = s.indexOf(' ');
 
-    // Check if there is a space
     if (spaceIndex !== -1) {
-        // Return substring up to the first space
         return s.substring(0, spaceIndex);
-    } else {
-        // Return the entire string if no space
+    } 
+	else {
         return s;
     }
 }
