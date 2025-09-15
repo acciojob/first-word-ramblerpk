@@ -1,17 +1,19 @@
 function firstWord(s) {
-  // your code here
-	if (s.length === 0) {
+    // Handle empty string
+    if (s.length === 0) {
         return '';
     }
-
-    let spaceIndex = s.indexOf(' ');
-
-    if (spaceIndex !== -1) {
-        return s.substring(0, spaceIndex);
-    } 
-	else {
-        return s;
+    
+    // Split the string by spaces and filter out empty strings
+    const words = s.split(' ').filter(word => word.length > 0);
+    
+    // If no words found, return empty string
+    if (words.length === 0) {
+        return '';
     }
+    
+    // Return the first word
+    return words[0];
 }
 
 // Do not change the code below
